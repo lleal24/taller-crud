@@ -32,5 +32,5 @@ const estrenosSchema = new Schema({
 
 });
 
-//importacion del esquema
+//exportacion del esquema
 module.exports = mongoose.model('estrenos', estrenosSchema)
