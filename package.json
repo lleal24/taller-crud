@@ -1,0 +1,28 @@
+{
+  "name": "taller-crud",
+  "version": "1.0.0",
+  "description": "Taller CRUD mongo-node.js",
+  "main": "raiz.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon raiz.js" 
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lleal24/taller-crud.git"
+  },
+  "author": "Grupo bit af",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lleal24/taller-crud/issues"
+  },
+  "homepage": "https://github.com/lleal24/taller-crud#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.7.5"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.3"
+  }
+}
