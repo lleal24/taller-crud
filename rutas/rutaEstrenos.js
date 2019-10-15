@@ -4,7 +4,7 @@
 //MODULOS NECESARIO
 const express = require('express');
 const router = express.Router(); //manejador de ruts
-const Estrenos = require('../modelo/estrenosModelo'); //modelo estrenos
+const Estrenos = require('../modelo/estrenosModelo'); //modelo estrenos '../modelo/estrenosModelo'
 
 //-------------------------------------------------------------------------
 // CREATE - METODO: POST / AGREGAR ESTRENO
@@ -24,7 +24,7 @@ router.get('/estrenos/:id',(req,res,next)=>{
 //-------------------------------------------------------------------------
 // UPDATE - METODO: PUT / ACTUALIZAR
 router.put('/estrenos/:id',(req,res,next)=>{
-    Estrenos.findById({_id: req.params.id}, req.body)
+    Estrenos.findByIdAndUpdate({_id: req.params.id}, req.body)
     .then(()=>{
         Estrenos.findOne({_id: req.params.id})
         .then((estrenos)=>{

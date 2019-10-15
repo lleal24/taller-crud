@@ -27,7 +27,7 @@ mongoose.connect("mongodb://localhost:27017/peliculas", { useNewUrlParser: true,
     .then(db => console.log('DB connected')) //Si se conecta
     .catch(err => console.log(err)); //Si falla la conexion
 
-    app.set('port', process.env.PORT || 3002);
+    app.set('port', process.env.PORT || 3030)
 
 
 // ------------CONFIGURACION PARA POSTMAN-------------------------------------------
