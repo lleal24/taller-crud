@@ -3,7 +3,7 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    route = require('./rutas/rutaEstrenos'),
+    route = require('./rutas/rutaInfantiles'),
 
     app = express()  /* ,
     PORT = 3000,
