@@ -3,7 +3,10 @@
 const express = require('express'),
     bodyParser = require('body-parser'),
     mongoose = require('mongoose'),
-    route = require('./rutas/rutaInfantiles'),
+    estrenos = require('./rutas/rutaEstrenos'),
+    infantiles = require('./rutas/rutaInfantiles'),
+    clasicas = require('./rutas/rutaClasicas'),
+    recomendadas = require('./rutas/rutaRecomendadas'),
 
     app = express()  /* ,
     PORT = 3000,
@@ -30,9 +33,12 @@ mongoose.connect("mongodb://localhost:27017/peliculas", { useNewUrlParser: true,
     app.set('port', process.env.PORT || 3030)
 
 
-// ------------CONFIGURACION PARA POSTMAN-------------------------------------------
+// ------------CONFIGURACION PARA POSTMAN DE RUTAS-------------------------------------------
 app.use(bodyParser.json()); 
-app.use('/api', route); 
+app.use('/api/estrenos', estrenos); 
+app.use('/api/infantiles', infantiles);
+app.use('/api/clasicas', clasicas); 
+app.use('/api/recomendadas', recomendadas);
 //----------------------------------------------------------------------------------
 
 
