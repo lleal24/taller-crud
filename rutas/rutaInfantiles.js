@@ -5,7 +5,7 @@ const router = express.Router() //Manejador de rutas de Express
 const Infantiles = require('../modelo/infantilesModelo')
 
 //AGREGAR -> POST/CREATE
-router.post('/infantiles', (req, res, next) => {
+router.post('/', (req, res, next) => {
     //coleccion.insert({})
     Infantiles.create(req.body)
         .then((infantiles) => {
@@ -14,7 +14,7 @@ router.post('/infantiles', (req, res, next) => {
 })
 
 //ACTUALIZAR -> PUT/UPDATE
-router.put('/infantiles/:id', (req, res, next) => {
+router.put('/:id', (req, res, next) => {
     //coleccion.update({})
     Infantiles.findByIdAndUpdate({ _id: req.params.id }, req.body)
         .then(() => {
@@ -27,7 +27,7 @@ router.put('/infantiles/:id', (req, res, next) => {
 
 
 //ELIMINAR -> DELETE
-router.delete('/infantiles/:id', (req, res, next) => {
+router.delete('/:id', (req, res, next) => {
 
     Infantiles.findOneAndRemove({ _id: req.params.id })
         .then((infantiles) => {
