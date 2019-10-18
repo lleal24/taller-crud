@@ -23,8 +23,7 @@ const RecomendadasSchema = new Schema({
     },
 
     género: {
-        type: String,
-        enum: ["Drama", "Comedia", "Musical", "Romance"]
+        type: Array
     },
 
     protagonistas: {
